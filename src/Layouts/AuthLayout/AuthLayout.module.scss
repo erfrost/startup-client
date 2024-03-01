@@ -1,0 +1,69 @@
+%column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+$black-text: #101010;
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content {
+    @extend %column-center;
+    gap: 50px;
+    padding: 32px;
+    border-radius: 12px;
+    border: 2px solid #e8e8e8;
+}
+.formsContainer {
+    @extend %column-center;
+    gap: 25px;
+}
+.header {
+    @extend %column-center;
+    gap: 15px;
+}
+.title {
+    color: $black-text;
+    font-size: 24px;
+    font-weight: 600;
+}
+.forms {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+.routeBtn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: rgb(99, 99, 99);
+
+        .icon {
+            fill: rgb(99, 99, 99);
+        }
+    }
+}
+.icon {
+    width: 25px;
+    height: 25px;
+    transition: all 0.3s ease;
+}
+.text {
+    font-weight: 600;
+}

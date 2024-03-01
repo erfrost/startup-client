@@ -1,0 +1,45 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; 
+}
+.iconsGroup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.icon {
+    width: 144px;
+    height: 48px;
+}
+.singleIcon {
+    width: 48px;
+    height: 48px;
+}
+.titlesColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+.title, .text {
+    color: #585858;
+}
+.title {
+    max-width: 60%;
+    font-size: 32px;
+    font-weight: 500;
+}
+.text {
+    max-width: 75%;
+    font-size: 20px;
+    font-weight: 400;
+}
+.image {
+    width: 100%;
+    height: 600px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
