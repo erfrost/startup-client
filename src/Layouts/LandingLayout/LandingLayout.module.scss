@@ -68,3 +68,10 @@
         @extend %btn-animate;
     }
 }
+
+@media screen and (max-width: 450px) {
+    .authBtn {
+        font-size: 13px;
+        padding: 15px 20px;
+    }
+}

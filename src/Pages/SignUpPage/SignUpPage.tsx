@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AuthInputErrors, SignUpData } from "../../interfaces";
+import { AuthInputErrors, AuthResponse, SignUpData } from "../../interfaces";
 import AuthForm from "../../Components/AuthForm/AuthForm";
 import AuthLayout from "../../Layouts/AuthLayout/AuthLayout";
 import styles from "./SignUpPage.module.scss";
@@ -11,12 +11,6 @@ import Notification from "../../Components/Notification/Notification";
 import { AxiosResponse } from "axios";
 import { useRecoilState } from "recoil";
 import { userIdState } from "../../storage/atoms";
-
-interface Response {
-  user_id: string;
-  access_token: string;
-  refresh_token: string;
-}
 
 const SignUpPage = () => {
   const [data, setData] = useState<SignUpData>({
@@ -38,7 +32,7 @@ const SignUpPage = () => {
 
   const onSubmit = async (): Promise<void> => {
     setError("");
-    setInputErrors({ email: false, password: false });
+    setInputErrors({ nickname: false, email: false, password: false });
 
     const errorsArray: string[] = authValidate(
       data.email,
@@ -55,7 +49,7 @@ const SignUpPage = () => {
         data
       );
       console.log(res);
-      const { user_id, access_token, refresh_token }: Response = res.data;
+      const { user_id, access_token, refresh_token }: AuthResponse = res.data;
 
       setUserId(user_id);
       localStorage.setItem("access_token", access_token);
@@ -63,7 +57,7 @@ const SignUpPage = () => {
 
       router("/home");
     } catch (error: any) {
-      if (error.response.status === 409) {
+      if (error.response.status === 400) {
         setError(
           error?.response?.data?.message ||
             "Произошла ошибка запроса. Попробуйте позднее"

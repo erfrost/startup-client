@@ -3,9 +3,13 @@ import styles from "./SignInPage.module.scss";
 import { authValidate } from "../../utils/authValidate";
 import AuthForm from "../../Components/AuthForm/AuthForm";
 import AuthLayout from "../../Layouts/AuthLayout/AuthLayout";
-import { Link } from "react-router-dom";
-import { AuthInputErrors, SignInData } from "../../interfaces";
+import { Link, NavigateFunction, useNavigate } from "react-router-dom";
+import { AuthInputErrors, AuthResponse, SignInData } from "../../interfaces";
 import Notification from "../../Components/Notification/Notification";
+import { AxiosResponse } from "axios";
+import axiosInstance from "../../axios.config";
+import { useRecoilState } from "recoil";
+import { userIdState } from "../../storage/atoms";
 
 const SignInPage = () => {
   const [data, setData] = useState<SignInData>({
@@ -18,10 +22,37 @@ const SignInPage = () => {
     password: false,
   });
   const [validateErrors, setValidateErrors] = useState<string[]>([]);
+  const [userId, setUserId] = useRecoilState<string | undefined>(userIdState);
+  const [error, setError] = useState<string>("");
+  const router: NavigateFunction = useNavigate();
 
-  const onSubmit = (): void => {
+  const onSubmit = async (): Promise<void> => {
     setInputErrors({ email: false, password: false });
-    setValidateErrors(authValidate(data.email, data.password, setInputErrors));
+
+    const errorsArray: string[] = authValidate(
+      data.email,
+      data.password,
+      setInputErrors
+    );
+    setValidateErrors(errorsArray);
+
+    try {
+      if (errorsArray.length) return;
+      const res: AxiosResponse = await axiosInstance.post("auth/signIn", data);
+      console.log(res);
+      const { user_id, access_token, refresh_token }: AuthResponse = res.data;
+
+      setUserId(user_id);
+      localStorage.setItem("access_token", access_token);
+      localStorage.setItem("refresh_token", refresh_token);
+
+      router("/home");
+    } catch (error: any) {
+      setError(
+        error?.response?.data?.message ||
+          "Произошла ошибка запроса. Попробуйте позднее"
+      );
+    }
   };
 
   return (
@@ -58,6 +89,9 @@ const SignInPage = () => {
           Войти
         </div>
       </div>
+      {error && (
+        <Notification type="error" title="Произошла ошибка!" text={error} />
+      )}
     </AuthLayout>
   );
 };

@@ -22,7 +22,7 @@ const LandingBlock = ({
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  const xOffset: number = number % 2 === 0 ? -1000 : 1000;
+  const xOffset: number = number % 2 === 0 ? -300 : 300;
 
   return (
     <motion.div

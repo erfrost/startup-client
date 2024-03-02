@@ -3,6 +3,7 @@ import LandingLayout from "../../Layouts/LandingLayout/LandingLayout";
 import styles from "./LandingPage.module.scss";
 import { motion } from "framer-motion";
 import LandingBlock from "../../Components/LandingBlock/LandingBlock";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   return (
@@ -27,7 +28,9 @@ const LandingPage = () => {
             </div>
             <div className={styles.btnGroup}>
               <div className={styles.blueBtn}>Перейти</div>
-              <div className={styles.whiteBtn}>Стать пользователем</div>
+              <Link to="/signUp" className={styles.whiteBtn}>
+                Стать пользователем
+              </Link>
             </div>
           </motion.div>
           <LandingBlock
