@@ -1,0 +1,46 @@
+@import '../../../../variable.scss';
+
+.videoContainer {
+    position: relative;
+}
+.playIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 50px;
+    cursor: pointer;
+    color: $gray;
+}
+.mediaFile {
+    width: 250px;
+    height: 225px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: black;
+    object-fit: cover;
+    user-select: none;
+}
+.unknownFile {
+    width: 250px;
+    height: calc(225px - 4px);
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid $blue;
+    @extend %flex-center-center;
+}
+.content {
+    @extend %column-center;
+    gap: 25px;
+}
+.icon {
+    color: $blue;
+    width: 70px;
+    height: 70px;
+}
+.name {
+    font-size: 14px;
+    font-weight: 400;
+    user-select: none;
+}

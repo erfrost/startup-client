@@ -1,0 +1,11 @@
+@import '../../../../../../variable.scss';
+
+.file {
+    width: 200px;
+    height: 125px;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+    background-color: black;
+    object-fit: cover;
+}

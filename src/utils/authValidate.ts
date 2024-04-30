@@ -7,9 +7,9 @@ interface PasswordValidateReturn {
 }
 
 export const authValidate = (
+  setValidate: Dispatch<SetStateAction<AuthInputErrors>>,
   email: string,
   password: string,
-  setValidate: Dispatch<SetStateAction<AuthInputErrors>>,
   nickname?: string
 ): string[] => {
   const errors: string[] = [];
@@ -20,7 +20,7 @@ export const authValidate = (
 
     errors.push("Некорректный никнейм");
   }
-  console.log(email, email.includes("@"));
+
   if (!email.includes("@")) {
     setValidate((prevState) => {
       return { ...prevState, email: true };

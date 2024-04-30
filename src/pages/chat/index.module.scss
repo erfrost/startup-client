@@ -1,0 +1,54 @@
+@import '../../variable.scss';
+
+.container {
+    height: calc(100% - 75px);
+    @extend %block-white-default;
+    @extend %column;
+}
+.header {
+    @extend %row-center-between;
+    padding-bottom: 15px;
+}
+.arrow, .menu {
+    color: $blue;
+    padding: 15px;
+    cursor: pointer;
+    @extend %transition-03;
+
+    &:hover {
+        color: $blue-hover;
+    }
+}
+.arrow {
+    width: 20px;
+    height: 20px;
+}
+.menu {
+    width: 25px;
+    height: 25px;
+}
+.userInfo {
+    @extend %row-center;
+    gap: 15px
+}
+.textInfo {
+    @extend %column;
+    gap: 5px;
+}
+.nickname {
+    font-size: 16px;
+    font-weight: 500;
+}
+.date {
+    font-size: 12px;
+    font-weight: 400;
+    color: $text-gray;
+    @extend %row-center;
+    gap: 10px;
+}
+.onlineCircle {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: rgb(0, 194, 0);
+}

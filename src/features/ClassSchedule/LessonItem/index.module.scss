@@ -1,0 +1,62 @@
+@import '../../../variable.scss';
+
+.lesson {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-bottom: 1px solid $background-color-rose-2;
+    @extend %row;
+    align-items: center;
+    gap: 5px;
+    @extend %transition-03;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $background-color-rose-2;
+    }
+    &:last-child {
+        border: none;
+    }
+}
+.hoveredDisabled {
+    cursor: default;
+    
+    &:hover {
+        background-color: transparent;
+    }
+}
+.number {
+    width: 5%;
+    font-size: 13px;
+    font-weight: 700;
+    color: $text-rose;
+}
+.nameInput, .time {
+    font-size: 14px;
+    font-weight: 400;
+    color: $text-rose;
+}
+.time {
+    width: 40%;
+}
+.editBtn {
+    @extend %btn-blue;
+    padding: 10px;
+    @extend %flex-center-center;
+}
+.icon {
+    width: 16px;
+    height: 16px;
+}
+.nameInput {
+    border: none;
+    background-color: transparent;
+    flex-grow: 1;
+    cursor: pointer;
+
+    &:focus-visible {
+        outline: none;
+    }
+}
+.nameInputActive {
+    cursor: text;
+}

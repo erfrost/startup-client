@@ -1,0 +1,65 @@
+@import '../../variable.scss';
+
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $modal-background;
+    z-index: 20;
+    @extend %flex-center-center;
+    @extend %transition-03;
+}
+.fullScreenContainer {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+.image {
+    max-width: 70%;
+    max-height: 70%;
+    border-radius: 8px;
+    user-select: none;
+    @extend %transition-03;
+}
+.fullScreenImage {
+    max-width: none;
+    max-height: none;
+}
+.title {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: 400;
+    color: $text-blue;
+    text-align: center;
+    @extend %transition-03;
+    user-select: none;
+}
+.buttonsGroup {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    @extend %row-center;
+    gap: 25px;
+    @extend %transition-03;
+}
+.btn {
+    padding: 10px;
+    background-color: $text-gray;
+    border-radius: 50%;
+    @extend %flex-center-center;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgb(81, 81, 81);
+    }
+}
+.icon {
+    color: white;
+    width: 25px;
+    height: 25px;
+}

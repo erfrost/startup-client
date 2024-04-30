@@ -1,0 +1,53 @@
+@import '../../variable.scss';
+
+.container {
+    width: calc(100% - 30px);
+    @extend %row-center-between;
+    padding: 15px;
+    border-radius: 8px;
+    @extend %transition-03;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $gray-dull;
+    }
+}
+.left {
+    @extend %row-center;
+    gap: 25px;
+}
+.info {
+    @extend %column;
+    gap: 5px;
+}
+.nickname {
+    font-weight: 600;
+}
+.lastMessage {
+    @extend %row-center;
+    gap: 5px;
+}
+.avatar {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid $text-gray;
+    padding: 2px;
+}
+.message {
+    font-size: 14px;
+    font-weight: 300;
+    color: $text-gray;
+}
+.countContainer {
+    width: 25px;
+    height: 25px;
+    background-color: $blue;
+    border-radius: 50%;
+    @extend %flex-center-center;
+}
+.count {
+    font-weight: 600;
+    font-size: 13px;
+    color: white;
+}

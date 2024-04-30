@@ -1,0 +1,117 @@
+$text-black: #101010;
+$text-purple: #1B0A29;
+$text-purple-hover: #371553;
+$text-rose: #877D92;
+$text-blue: #497878;
+$text-gray: #676767;
+$blue: #1FC6C6;
+// $blue-hover: #19a0a0;
+$blue-hover: #1cb8b8;
+$gray: #929292;
+$purple: #563f7f;
+$error: red;
+$error-hover: rgb(186, 0, 0);
+$border-gray: rgb(205, 205, 205);
+$border-gray-hover: rgb(171, 171, 171);
+$shadow-default: 0px 6px 58px 0px rgba(196, 203, 214, 0.1);;
+$shadow-default-hover: 0px 15px 58px 0px rgba(196, 203, 214, 0.4);
+$background-color-rose: #F9F4FD;
+$background-color-rose-hover: #f1f1f1;
+$background-color-rose-2: #E8D8F0;
+$background-color-rose-2-hover: #c5b6cd;
+$background-color-blue: #347676;
+$background-color-blue-hover: #497878;
+$gray-dull: rgb(243, 243, 243);
+$gray-dull-hover: rgb(220, 220, 220);
+$modal-background: rgba($color: black, $alpha: 0.8);
+
+%row {
+    display: flex;
+    flex-direction: row;
+}
+%column {
+    display: flex;
+    flex-direction: column;
+}
+%column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+%column-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+%row-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+%row-center-between {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+%flex-center-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+%transition-03 {
+    transition: all 0.3s ease;
+}
+%block-white-default {
+    background-color: white;
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0px 6px 58px 0px #C4CBD61A;
+}
+%input-text {
+    font-size: 14px;
+    font-weight: 400;
+    color: $text-black;
+}
+%placeholder-text {
+    font-size: 14px;
+    font-weight: 400;
+    color: $text-rose;
+}
+%btn-white {
+    padding: 12px 20px;
+    background-color: white;
+    border-radius: 14px;
+    @extend %row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: $blue;
+    box-shadow: $shadow-default;
+    cursor: pointer;
+    user-select: none;
+    @extend %transition-03;
+
+    &:hover {
+        box-shadow: $shadow-default-hover;
+    }
+}
+%btn-blue {
+    padding: 12px 20px;
+    background-color: $blue;
+    border-radius: 14px;
+    @extend %row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: white;
+    box-shadow: $shadow-default;
+    cursor: pointer;
+    user-select: none;
+    @extend %transition-03;
+
+    &:hover {
+        background-color: $blue-hover;
+        box-shadow: $shadow-default-hover;
+    }
+}

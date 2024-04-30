@@ -1,0 +1,22 @@
+@import '../../variable.scss';
+
+.container {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid $gray;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    @extend %transition-03;
+}
+.onlineStatus {
+    border-color: rgb(0, 225, 0);
+}
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}

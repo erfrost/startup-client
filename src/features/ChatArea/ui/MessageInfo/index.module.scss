@@ -1,0 +1,42 @@
+@import '../../../../variable.scss';
+
+.container {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    @extend %row-center;
+    gap: 5px;
+}
+.hoveredContainer {
+    padding: 5px 8px;
+    border-radius: 12px;
+    background-color: rgba($color: black, $alpha: 0.5);
+    opacity: 1;
+    @extend %transition-03;
+
+    span {
+        color: rgb(203, 203, 203);
+    }
+    svg {
+        color: rgb(203, 203, 203);
+    }
+}
+.time {
+    font-size: 11px;
+    font-weight: 400;
+    user-select: none;
+}
+.gray {
+    color: $text-gray;
+}
+.purple {
+    color: $text-purple;
+}
+.checkIcon {
+    color: $gray;
+    width: 15px;
+    height: 15px;
+}
+.checkIconActive {
+    color: $blue !important;
+}

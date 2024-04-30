@@ -1,20 +1,14 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import LandingPage from "./Pages/LandingPage/LandingPage";
-import SignUpPage from "./Pages/SignUpPage/SignUpPage";
-import SignInPage from "./Pages/SignInPage/SignInPage";
-import { RecoilRoot } from "recoil";
+import { ToastContainer } from "react-toastify";
+import AppProvider from "./app/providers/index";
+import Router from "./app/router/index";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
-    <RecoilRoot>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/signIn" element={<SignInPage />} />
-          <Route path="/signUp" element={<SignUpPage />} />
-        </Routes>
-      </BrowserRouter>
-    </RecoilRoot>
+    <AppProvider>
+      <Router />
+      <ToastContainer position="bottom-right" />
+    </AppProvider>
   );
 }
 

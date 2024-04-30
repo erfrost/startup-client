@@ -1,0 +1,15 @@
+@import '../../../../variable.scss';
+
+.container {
+    position: relative;
+    background-color: $background-color-rose-2;
+    border-radius: 8px;
+    padding: 10px 70px 10px 10px;
+}
+.content {
+    @extend %column;
+    gap: 10px;
+}
+.text {
+    font-weight: 400;
+}

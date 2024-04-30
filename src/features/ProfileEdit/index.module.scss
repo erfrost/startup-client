@@ -1,0 +1,98 @@
+@import '../../variable.scss';
+
+.container {
+    @extend %block-white-default;
+    @extend %column;
+    gap: 30px;
+}
+.block1 {
+    @extend %row;
+    justify-content: space-between;
+}
+.mainLeft {
+    @extend %column;
+    gap: 15px;
+}
+.avatarContainer {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid $blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &:hover {
+        .avatarEditBtn {
+            opacity: 1;
+        }
+    }
+}
+.avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.avatarEditBtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    @extend %flex-center-center;
+    opacity: 0;
+    cursor: pointer;
+    @extend %transition-03;
+}
+.fileInput {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+}
+.bigIcon {
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+.name {
+    font-size: 22px;
+    font-weight: 500;
+    color: $text-purple;
+}
+.role {
+    font-size: 14px;
+    font-weight: 400;
+    color: $text-purple;
+}
+.icon {
+    width: 24px;
+    height: 24px;
+    color: $blue;
+}
+.divider {
+    width: calc(100% + 50px);
+    height: 1px;
+    background-color: $background-color-rose-2;
+    margin-left: -25px;
+}
+.block2 {
+    @extend %column;
+    gap: 15px;
+}
+.blockTitle {
+    font-size: 18px;
+    font-weight: 500;
+    color: $text-purple;
+}

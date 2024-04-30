@@ -1,0 +1,78 @@
+@import '../../../../variable.scss';
+
+.container {
+    max-width: 100%;
+    height: 125px;
+    @extend %row-center;
+    gap: 15px;
+}
+.fileContainer {
+    width: 150px;
+    height: 100%;
+    position: relative;
+
+    &:hover {
+        .hovered {
+            opacity: 0.3;
+        }
+        .iconContainer {
+            opacity: 1;
+        }
+    }
+}
+.file {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: fill;
+    box-shadow: 10px 3px 32px -5px rgba(188, 188, 188, 0.75);
+}
+.unkownFile {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 10px 3px 32px -5px rgba(188, 188, 188, 0.75);
+    cursor: pointer;
+    @extend %flex-center-center;
+    position: relative;
+}
+.fileIcon {
+    width: 20%;
+    height: 20%;
+    color: $blue;
+    margin-bottom: 35px;
+}
+.fileName {
+    font-size: 11px;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.hovered {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    border-radius: 8px;
+    background-color: black;
+    opacity: 0;
+    @extend %row;
+    justify-content: flex-end;
+    padding: 10px;
+    @extend %transition-03;
+}
+.iconContainer {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 5px;
+    opacity: 0;
+    @extend %flex-center-center;
+    @extend %transition-03;
+    cursor: pointer;   
+}
+.icon {
+    color: white;
+}

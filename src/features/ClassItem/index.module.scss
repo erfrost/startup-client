@@ -1,0 +1,48 @@
+@import '../../variable.scss';
+
+.container {
+    width: calc(100% - 60px);
+    @extend %block-white-default;
+    @extend %column;
+    gap: 25px;
+}
+.header {
+    width: 100%;
+    @extend %row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+.name {
+    font-size: 20px;
+    font-weight: 400;
+    color: $text-purple;
+}
+.classContent {
+    @extend %row;
+    align-items: flex-start;
+    gap: 50px
+}
+.right {
+    width: 100%;
+    @extend %column;
+    align-items: flex-start;
+    gap: 50px;
+}
+.topStudents {
+    @extend %column;
+    gap: 15px;
+}
+.topBold {
+    font-size: 20px;
+    font-weight: 400;
+    color: $text-purple;
+}
+.topItem {
+    font-size: 18px;
+    font-weight: 400;
+    color: #8c8c8c;
+}
+.link {
+    width: calc(100% - 50px);
+}

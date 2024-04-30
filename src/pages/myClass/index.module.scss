@@ -1,0 +1,7 @@
+@import '../../variable.scss';
+
+.container {
+    @extend %column;
+    gap: 20px;
+    margin-top: 50px;
+}

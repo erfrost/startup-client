@@ -1,0 +1,24 @@
+@import '../../variable.scss';
+
+.container {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    @extend %row;
+    align-items: center;
+    gap: 15px;
+    padding: 7px 20px;
+    background-color: rgb(62, 62, 62);
+    border-radius: 8px;
+}
+.text {
+    font-size: 17px;
+    font-weight: 400;
+    color: white;
+}
+.icon {
+    width: 24px;
+    height: 24px;
+    color: white;
+}

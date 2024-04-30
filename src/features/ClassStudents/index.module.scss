@@ -1,0 +1,91 @@
+@import '../../variable.scss';
+
+.studentsList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+.student {
+    @extend %row;
+    align-items: center;
+    gap: 15px;
+}
+.nickname {
+    font-size: 18px;
+    font-weight: 400;
+    color: $text-purple;
+    user-select: none;
+}
+.iconBtn {
+    padding: 5px;
+    background-color: $blue;
+    cursor: pointer;
+    @extend %transition-03;
+    border-radius: 8px;
+    @extend %flex-center-center;
+
+    &:hover {
+        background-color: $blue-hover;
+    }
+}
+.icon {
+    color: white;
+    width: 20px;
+    height: 20px;
+}
+.btn {
+    width: calc(100% - 30px);
+    padding: 10px 15px;
+    background-color: $blue;
+    @extend %flex-center-center;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 400;
+    color: white;
+    white-space: nowrap;
+    cursor: pointer;
+    @extend %transition-03;
+    user-select: none;
+
+    &:hover {
+        background-color: $blue-hover;
+    }
+}
+.block {
+    @extend %column;
+    gap: 20px;
+}
+.header {
+    @extend %row-center-between;
+}
+.blockTitle {
+    font-size: 32px;
+    font-weight: 400;
+    color: $text-purple;
+}
+.linkContainer {
+    @extend %row-center;
+    gap: 15px;
+}
+.copyBtn {
+    padding: 8px;
+    border-radius: 8px;
+    @extend %flex-center-center;
+    background-color: white;
+    box-shadow: $shadow-default;
+    cursor: pointer;
+    @extend %transition-03;
+
+    &:hover {
+        box-shadow: $shadow-default-hover;
+    }
+}
+.copyIcon {
+    width: 19px;
+    height: 19px;
+    color: $blue;
+}
+.text {
+    font-size: 14px;
+    color: $text-gray;
+}

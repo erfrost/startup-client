@@ -1,0 +1,33 @@
+@import '../../variable.scss';
+
+.inputsList {
+    @extend %row-center;
+    gap: 10px;
+}
+.input {
+    width: 25px;
+    height: 40px;
+    border-radius: 8px;
+    border: 2px solid $blue;
+    padding: 5px;
+    font-size: 24px;
+    font-weight: 700;
+    color: $text-blue;
+    text-align: center;
+    box-shadow: 10px 18px 15px -9px rgba(0,0,0,0.1);
+    @extend %transition-03;
+
+    &:hover {
+        border-color: $blue-hover;
+    }
+    &:focus-visible {
+        outline: none;
+    }
+}
+.error {
+    border-color: $error;
+
+    &:hover {
+        border-color: $error-hover;
+    }
+}

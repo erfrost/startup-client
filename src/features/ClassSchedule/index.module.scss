@@ -1,0 +1,49 @@
+@import '../../variable.scss';
+
+.block {
+    @extend %column;
+    gap: 20px;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding-bottom: 25px;
+}
+.header {
+    @extend %row-center-between;
+    position: relative;
+}
+.blockTitle {
+    font-size: 32px;
+    font-weight: 400;
+    color: $text-purple;
+    user-select: none;
+}
+.weekSelect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 370px;
+    transform: translate(-50%, -50%);
+    @extend %row-center-between;
+    gap: 15px;
+    user-select: none
+}
+.arrowBtn {
+    @extend %flex-center-center;
+    padding: 5px;
+    border-radius: 8px;
+    border: 2px solid $blue;
+    cursor: pointer;
+    background-color: transparent;
+    @extend %transition-03;
+
+    &:hover {
+        border-color: $blue-hover;
+    }
+}
+.icon {
+    width: 20px;
+    height: 20px;
+}

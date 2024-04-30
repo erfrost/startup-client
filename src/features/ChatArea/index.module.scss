@@ -1,0 +1,53 @@
+@import '../../variable.scss';
+
+.container {
+    height: 500px;
+    @extend %column;
+    flex-grow: 1;
+}
+.footer {
+    width: 100%;
+    @extend %column;
+    gap: 15px;
+    padding-top: 15px;
+}
+.footerTop {
+    @extend %row-center-between;
+    gap: 20px;
+}
+.iconContainer {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    cursor: pointer;   
+    @extend %flex-center-center;
+    @extend %transition-03;
+}
+.icon {
+    width: 100%;
+    height: 100%;
+    color: $blue;
+    @extend %transition-03;
+    animation: hide 0.5s ease;
+
+    &:hover {
+        color: $blue-hover;
+    }
+
+    @keyframes hide {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
+.area {
+    flex-grow: 1;
+    @extend %column;
+    // justify-content: flex-end;
+    gap: 10px;
+    overflow-y: auto;
+    padding: 25px 0;
+}

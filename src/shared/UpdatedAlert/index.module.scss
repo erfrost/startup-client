@@ -1,0 +1,49 @@
+@import '../../variable.scss';
+
+.container {
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    min-width: 40%;
+    transform: translateX(-50%);
+    @extend %row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 7px 20px;
+    background-color: rgb(62, 62, 62);
+    border-radius: 8px;
+}
+.text {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+}
+.buttonGroup {
+    @extend %row;
+    align-items: center;
+    gap: 15px;
+}
+.btn {
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 400;
+    color: white;
+    cursor: pointer;
+    @extend %transition-03;
+}
+.whiteBtn {
+    background-color: transparent;
+
+    &:hover {
+        background-color: rgb(32, 32, 32)
+    }
+}
+.greenBtn {
+    background-color: rgb(68, 138, 68);
+
+    &:hover {
+        background-color: rgb(64, 108, 64);
+    }
+}

@@ -1,0 +1,7 @@
+@import '../../variable.scss';
+
+.btn {
+    @extend %btn-white;
+    padding-left: 20px;
+    padding-right: 20px;
+}

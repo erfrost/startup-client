@@ -1,0 +1,114 @@
+@import '../../../../../variable.scss';
+
+%size {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+}
+
+.container {
+    width: 100%;
+    @extend %column;
+    gap: 10px;
+}
+.label {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    color: $text-purple;
+}
+.uploadList {
+    @extend %row-center;
+    gap: 10px;
+}
+.inputContainer {
+    position: relative;
+    @extend %size;
+}
+.btn {
+    width: 100%;
+    height: 100%;
+    border: 2px solid $blue;
+    border-radius: 8px;
+    @extend %flex-center-center;
+    cursor: pointer;
+    @extend %transition-03;
+
+    &:hover {
+        border-color: $blue-hover;
+
+        .icon {
+            color: $blue-hover;
+        }
+    }
+}
+.icon {
+    @extend %transition-03;
+    width: 24px;
+    height: 24px;
+    color: $blue;
+}
+.input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+.file {
+    width: 84px;
+    height: 84px;
+    border-radius: 8px;
+    @extend %transition-03;
+}
+.unkownFile {
+    @extend %size;
+    @extend %flex-center-center;
+    border: 2px solid $text-gray;
+}
+.unknownFileName {
+    font-size: 12px;
+    font-weight: 700;
+    color: $text-gray;
+    padding: 5px;
+    word-break: break-all;
+    text-align: center;
+}
+.fileContainer {
+    position: relative;
+    width: 84px;
+    height: 84px;
+    border-radius: 8px;
+    margin-top: 4px;
+    @extend %transition-03;
+
+    &:hover {
+        background-color: rgba($color: black, $alpha: 0.4);
+
+        .file {
+            filter: brightness(0.55);
+        }
+        .hovered {
+            opacity: 1;
+        }
+    }
+}
+.hovered {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    opacity: 0;
+    @extend %transition-03;
+    cursor: pointer;
+    @extend %flex-center-center;
+}
+.deleteIcon {
+    width: 30px;
+    height: 30px;
+    color: white;
+}

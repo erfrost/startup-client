@@ -1,0 +1,18 @@
+@import '../../variable.scss';
+
+.container {
+    position: relative;
+}
+.tooltipContent {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(48, 48, 48);
+    box-shadow: $shadow-default;
+    padding: 5px 15px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+}

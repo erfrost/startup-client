@@ -17,12 +17,12 @@
       "moduleResolution": "node",
       "resolveJsonModule": true,
       "isolatedModules": true,
-      "jsx": "preserve"
+      "jsx": "preserve",
     },
     "include": [
       "next-env.d.ts",
       "**/*.ts",
-      "**/*.tsx",
+      "**/*.tsx", "src/app/storage/atoms.js", "src/app/storage/selectors.js", "src/App.js",
     ],
     "exclude": [
       "node_modules"

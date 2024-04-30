@@ -1,0 +1,41 @@
+@import '../../../../variable.scss';
+
+.container {
+    position: relative;
+    border-radius: 8px;
+}
+.list {
+    @extend %row;
+    gap: 7px;
+}
+.textContainer {
+    position: relative;
+    background-color: $background-color-rose-2;
+    border-radius: 8px;
+    padding: 10px;
+    @extend %column;
+    gap: 10px;
+}
+.text {
+    font-weight: 400;
+    max-width: 85%;
+}
+.moreFiles {
+    display: grid; 
+    grid-template-columns: 1.5fr 1.5fr; 
+    grid-gap: 10px 10px; 
+    gap: 10px;
+    grid-template-areas: 
+      "top-left top-right"
+      "center center"
+      "bottom-left bottom-right"
+      "second-center second-center"
+      "second-bottom-left second-bottom-right"
+      "double-second-center double-second-center" 
+}
+.moreFiles > :nth-child(1) { grid-area: top-left; }
+.moreFiles > :nth-child(2) { grid-area: top-right; }
+.moreFiles > :nth-child(3) { grid-area: center; height: 400px; }
+.moreFiles > :nth-child(4) { grid-area: bottom-left; }
+.moreFiles > :nth-child(5) { grid-area: bottom-right; }
+.moreFiles > :nth-child(6) { grid-area: second-center; height: 400px; }

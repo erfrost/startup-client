@@ -1,0 +1,9 @@
+@import '../../variable.scss';
+
+.btn {
+    @extend %btn-blue;
+}
+.disabled {
+    background-color: $blue-hover;
+    cursor: default;
+}

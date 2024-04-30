@@ -1,0 +1,25 @@
+@import '../../variable.scss';
+
+.container {
+    width: 100%;
+    @extend %column;
+    gap: 50px;
+}
+.header {
+    width: 100%;
+    @extend %row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+.pageTitle {
+    font-size: 36px;
+    font-weight: 400;
+    color: $text-purple;
+}
+.classesList {
+    @extend %column;
+    align-items: flex-start;
+    gap: 35px;
+    padding-bottom: 25px;
+}

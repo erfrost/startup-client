@@ -1,0 +1,35 @@
+@import '../../variable.scss';
+
+.container {
+    position: relative;
+}
+.icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #1AD3D3;
+}
+.input {
+    width: 412px;
+    height: 48px;
+    border-radius: 14px;
+    border: none;
+    box-shadow: $shadow-default;
+    font-size: 17px;
+    color: rgb(91, 91, 91);
+    padding: 0 20px 0 50px; 
+    transition: all 0.5s ease;  
+
+    &:hover {
+        box-shadow: $shadow-default-hover;
+    }
+    &::placeholder {
+        color: #D9D9D9;
+    }
+    &:focus-visible {
+        outline: none;
+    }
+}

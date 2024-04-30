@@ -1,0 +1,30 @@
+@import '../../../variable.scss';
+
+.container {
+    width: 100%;
+    border: 1px solid $background-color-rose-2;
+    border-radius: 8px;
+    @extend %column;
+    user-select: none;
+}
+.header {
+    width: calc(100% - 20px);
+    padding: 15px 10px;
+    border-bottom: 1px solid $background-color-rose-2;
+    @extend %row-center-between;
+}
+.dayName {
+    font-size: 15px;
+    font-weight: 600;
+    color: $text-gray;
+    text-align: center;
+}
+.editBtn {
+    @extend %btn-blue;
+    padding: 10px;
+    @extend %flex-center-center;
+}
+.icon {
+    width: 16px;
+    height: 16px;
+}

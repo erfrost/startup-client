@@ -1,0 +1,52 @@
+@import "../../variable.scss";
+
+.form {
+    @extend %column;
+    position: relative;
+    gap: 5px;
+}
+.formTitle {
+    color: $text-black;
+    font-size: 16px;
+    font-weight: 500;
+}
+.input {
+    width: 350px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 2px solid #b8b8b8;
+    font-size: 18px;
+    font-weight: 500;  
+    box-shadow: none;
+    outline: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+        border-color: $gray;
+    }
+    &:focus-visible {
+        border-color: $gray;
+    }
+}
+.inputContainer {
+    position: relative;
+}
+.icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    fill: $gray;
+}
+.inputError {
+    border-color: red;
+
+    &:hover {
+        border-color: red;
+    }
+    &:focus {
+        border-color: $gray;
+    }
+}

@@ -1,0 +1,35 @@
+@import '../../../../../variable.scss';
+
+.container {
+    width: 100%;
+    @extend %column;
+    gap: 10px;
+}
+.label {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    color: $text-purple;
+}
+.input {
+    border-radius: 8px;
+    border: 1px solid $background-color-rose-2;
+    padding: 10px 15px;
+    @extend %transition-03;
+    font-size: 14px;
+    font-weight: 400;
+    color: $text-purple;
+    font-family: monospace;
+
+    &:hover {
+        border-color: $background-color-rose-2-hover;
+    }
+    &:focus-visible {
+        outline: none;
+    }
+}
+.textarea {
+    height: 100px;
+    resize: none;
+    letter-spacing: 0px;
+}

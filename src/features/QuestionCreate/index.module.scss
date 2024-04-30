@@ -1,0 +1,86 @@
+@import '../../variable.scss';
+
+.container {
+    flex-grow: 1;
+    @extend %column-center;
+    gap: 25px;
+}
+.title {
+    font-size: 26px;
+    font-weight: 500;
+    color: $text-purple;
+}
+.block {
+    width: calc(100% - 50px);
+    @extend %column;
+    gap: 15px;
+    @extend %block-white-default;
+}
+.blocked {
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    .input {
+        cursor: not-allowed;
+
+        &:hover {
+            border-color: $background-color-rose-2;
+        }
+        &:focus-visible {
+            border-color: $background-color-rose-2;
+        }
+    }
+    div:hover {
+        cursor: not-allowed;
+        background-color: $blue;
+    }
+}
+.blockedBtn {
+    opacity: 0.5;
+
+    &:hover {
+        cursor: not-allowed;
+        background-color: $blue;
+    }
+}
+.blockTitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: $text-purple;
+}
+.blockSubTitle {
+    font-size: 14px;
+    font-weight: 400;
+    color: $text-purple;
+}
+.input {
+    padding: 5px 12px;
+    border: 1px solid $background-color-rose-2;
+    border-radius: 8px;
+    font-size: 18px;
+    font-family: monospace;
+    font-weight: 400;
+    color: $text-gray;
+    @extend %transition-03;
+
+    &:hover {
+        border-color: $background-color-rose-2-hover;
+    }
+    &:focus-visible {
+        outline: none;
+        border-color: $background-color-rose-2-hover;
+    }
+    &::placeholder {
+        color: $text-gray;
+        opacity: 0.35;
+    }
+}
+.textarea {
+    resize: none;
+    height: 250px;
+}
+.btn {
+    width: 100px;
+    font-size: 14px;
+    @extend %btn-blue;
+}

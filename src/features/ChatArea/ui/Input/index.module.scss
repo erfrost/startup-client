@@ -1,0 +1,46 @@
+@import '../../../../variable.scss';
+
+.container {
+    width: 100%;
+    position: relative;
+}
+.input {
+    width: calc(100% - 30px);
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid $border-gray;
+    @extend %transition-03;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    color: $text-purple;
+
+    &:focus-visible {
+        outline: none;
+        border-color: $border-gray-hover;
+    }
+    &:hover {
+        border-color: $border-gray-hover;
+    }
+    &::placeholder {
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.8px;
+        user-select: none;
+    }
+}
+.icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: $blue;
+    padding: 5px;
+    cursor: pointer;
+
+    &:hover {
+        color: $blue-hover;
+    }
+}

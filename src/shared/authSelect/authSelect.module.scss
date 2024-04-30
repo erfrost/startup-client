@@ -1,0 +1,49 @@
+@import "../../variable.scss";
+
+.container {
+    width: 100%;
+    @extend %column;
+    gap: 5px;
+}
+.label {
+    color: $text-black;
+    font-size: 16px;
+    font-weight: 500;
+}
+.selectContainer {
+    width: 100%;
+    position: relative;
+}
+.select {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #b8b8b8;
+    font-size: 18px;
+    font-weight: 500;  
+    box-shadow: none;
+    outline: none;
+    appearance: none;
+    @extend %transition-03;
+
+    &:hover {
+        border-color: $gray;
+
+        .arrow {
+            color: $blue-hover;
+        }
+    }
+    &:focus-visible {
+        border-color: $gray;
+    }
+}
+.arrow {
+    width: 24px;
+    height: 24px;
+    color: $blue;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    @extend %transition-03;
+}

@@ -1,0 +1,51 @@
+@import '../../../../../../variable.scss';
+
+.addBtn {
+    @extend %btn-blue;
+}
+.paramContainer {
+    @extend %row-center-between;
+}
+.input {
+    padding: 5px 10px;
+    font-size: 17px;
+    font-weight: 400;
+    font-family: monospace;
+    color: $text-gray;
+    border: 1px solid $blue;
+    border-radius: 8px;
+    @extend %transition-03;
+
+    &:hover {
+        border-color: $blue-hover;
+    }
+    &:focus-visible {
+        outline: none;
+    }
+    &::placeholder {
+        font-size: 15px;
+    }
+}
+.dash {
+    width: 10px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: $blue;   
+}
+.iconContainer {
+    padding: 5px;
+    @extend %flex-center-center;
+    cursor: pointer;
+
+    &:hover {
+        .icon {
+            color: $blue-hover;
+        }
+    }
+}
+.icon {
+    width: 26px;
+    height: 26px;
+    color: $blue;
+    @extend %transition-03;
+}

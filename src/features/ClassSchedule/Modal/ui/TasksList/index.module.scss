@@ -1,0 +1,73 @@
+@import '../../../../../variable.scss';
+
+.container {
+    width: 350px;
+    @extend %column;
+    align-items: flex-start;
+    gap: 25px;
+}
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    color: $text-purple;
+}
+.list {
+    width: 100%;
+    @extend %column;
+    gap: 25px;
+}
+.task {
+    width: 100%;
+    @extend %column;
+    gap: 20px;
+}
+.taskTitle, .taskDescription {
+    font-weight: 400;
+    color: $text-purple;
+}
+.taskTitle {
+    font-size: 20px;
+}
+.taskDescription {
+    font-size: 15px;
+}
+.filesList {
+    @extend %row;
+    gap: 15px;
+}
+.file {
+    width: 65px;
+    height: 65px;
+    border-radius: 8px; 
+}
+.file {
+    width: 65px;
+    height: 65px;
+    border-radius: 8px;
+    @extend %transition-03;
+}
+.unkownFile {
+    width: 65px;
+    height: 65px;
+    border-radius: 8px;
+    @extend %flex-center-center;
+    border: 2px solid $text-gray;
+}
+.unknownFileName {
+    font-size: 12px;
+    font-weight: 700;
+    color: $text-gray;
+    padding: 5px;
+    word-break: break-all;
+    text-align: center;
+}
+.header {
+    width: 100%;
+    @extend %row-center-between;
+}
+.btn {
+    @extend %btn-blue;
+    padding: 7px 12px;
+    border-radius: 10px;
+    font-size: 14px;
+}

@@ -1,0 +1,30 @@
+@import '../../variable.scss';
+
+.container {
+    @extend %column;
+    gap: 50px;
+    position: relative;
+    padding-bottom: 50px;
+}
+.header {
+    width: 100%;
+    @extend %row-center-between;
+}
+.title {
+    font-size: 36px;
+    font-weight: 400;
+    color: $text-purple;
+}
+.createBtn {
+    @extend %btn-white;
+}
+.list {
+    @extend %column;
+    gap: 25px;
+}
+.emptyEventsText {
+    font-size: 28px;
+    font-weight: 400;
+    color: $text-purple;
+    align-self: center;
+}

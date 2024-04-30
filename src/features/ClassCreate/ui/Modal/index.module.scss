@@ -1,0 +1,22 @@
+@import '../../../../variable.scss';
+
+.title {
+    font-size: 24px;
+    font-weight: 400;
+    color: $text-purple;
+}
+.submitBtn {
+    padding: 10px 25px;
+    border-radius: 8px;
+    @extend %flex-center-center;
+    cursor: pointer;
+    @extend %transition-03;
+    background-color: $blue;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+
+    &:hover {
+        background-color: $blue-hover;
+    }
+}

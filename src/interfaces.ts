@@ -22,3 +22,17 @@ export interface AuthResponse {
   access_token: string;
   refresh_token: string;
 }
+
+export interface UserInfo {
+  user_id: string;
+  avatar_url: string;
+  nickname: string;
+  online_status: boolean;
+  last_online_date: string;
+}
+
+export interface MessageFile {
+  name: string;
+  type: string;
+  url: string;
+}

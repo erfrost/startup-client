@@ -1,0 +1,45 @@
+@import '../../../../variable.scss';
+
+.block {
+    @extend %column;
+    gap: 10px;
+}
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    color: $text-purple;
+}
+.blockTitle {
+    font-size: 17px;
+    font-weight: 400;
+    color: $text-purple;
+}
+.linkContainer {
+    @extend %row;
+    align-items: center;
+    gap: 25px;
+}
+.link {
+    font-size: 14px;
+    font-size: 400;
+    color: $text-gray;
+    text-decoration: underline;
+}
+.copyBtn {
+    padding: 10px;
+    @extend %flex-center-center;
+    background-color: $blue;
+    border-radius: 14px;
+    box-shadow: $shadow-default;
+    cursor: pointer;
+    @extend %transition-03;
+
+    &:hover {
+        box-shadow: $shadow-default-hover;
+    }
+}
+.icon {
+    width: 18px;
+    height: 18px;
+    color: white;
+}

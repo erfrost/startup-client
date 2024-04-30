@@ -1,0 +1,68 @@
+@import '../../../../variable.scss';
+
+.container {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    cursor: pointer;   
+    position: relative;
+    @extend %flex-center-center;
+    @extend %transition-03;
+}
+.help {
+    position: absolute;
+    top: -85px;
+    left: -250px;
+    width: 250px;
+    background-color: white;
+    border: 1px solid red;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 11px;
+    @extend %column;
+    gap: 5px;
+    user-select: none;
+}
+.icon {
+    width: 100%;
+    height: 100%;
+    color: $blue;
+    @extend %transition-03;
+    animation: hide 0.5s ease;
+
+    &:hover {
+        color: $blue-hover;
+    }
+
+    @keyframes hide {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
+.active {
+    scale: 1.2;
+    color: red !important;
+}
+.timer {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    @extend %row-center;
+    gap: 7px;
+}
+.circle {
+    width: 6px;
+    height: 6px;
+    background-color: red;
+    border-radius: 50%;
+}
+.time {
+    font-size: 10px;
+    font-weight: 400;
+    color: $text-purple;
+}
